@@ -1,4 +1,4 @@
-var roudebushfarms = angular.module('roudebushfarms',[]);
+var roudebushfarms = angular.module('roudebushfarms',['ngRoute']);
 
 roudebushfarms.config(['$routeProvider', function($routeProvider){
 	$routeProvider.when('/', {
