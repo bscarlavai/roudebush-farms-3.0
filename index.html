@@ -22,10 +22,10 @@
   <body>
     <!-- Wrap all page content here -->
     <div id="wrap">
-      <div ng-include="'templates/nav.html'" ng-controller="navController"></div>
+      <div ng-include="'templates/nav.html'" ng-controller="navCtrl"></div>
 
       <!-- Begin page content -->
-      <div class="container">
+      <div class="content container">
         <div ng-view></div>
       </div>
     </div>
@@ -45,11 +45,15 @@
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="js/controllers/navigation.js"></script>
     <script type="text/javascript" src="js/controllers/home.js"></script>
+    <script type="text/javascript" src="js/controllers/newsletters.js"></script>
     <script type="text/javascript" src="js/controllers/gallery.js"></script>
+    <script type="text/javascript" src="js/controllers/about.js"></script>
     
     <script type="text/javascript">
       $(document).ready(function() {
-        
+        /*$('.nav a').on('click', function(){
+          $('.navbar-toggle').click();
+        });*/
       });
     </script>
 

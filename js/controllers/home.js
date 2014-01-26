@@ -1,3 +1,3 @@
-roudebushfarms.controller('homeController', ['$scope', function($scope) {
+roudebushfarms.controller('homeCtrl', ['$scope', function($scope) {
 	
 }]);
