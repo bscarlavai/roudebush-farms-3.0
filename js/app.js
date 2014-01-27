@@ -1,4 +1,4 @@
-var roudebushfarms = angular.module('roudebushfarms',['ngRoute']);
+var roudebushfarms = angular.module('roudebushfarms', ['ngRoute']);
 
 roudebushfarms.config(['$routeProvider', function($routeProvider){
 	$routeProvider
@@ -17,6 +17,10 @@ roudebushfarms.config(['$routeProvider', function($routeProvider){
 		.when('/members', {
 			templateUrl: 'templates/members.html',
 			controller: 'membersCtrl'
+		})
+		.when('/advertising', {
+			templateUrl: 'templates/advertising.html',
+			controller: 'advertisingCtrl'
 		})
 		.when('/about', {
 			templateUrl: 'templates/about.html',

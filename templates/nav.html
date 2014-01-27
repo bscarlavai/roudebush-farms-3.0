@@ -25,30 +25,30 @@
           </ul>
         </li>
         <li ng-class="{ active: isActive('/gallery') }"><a href="#/gallery">Gallery</a></li>
-        <li class="dropdown">
+        <li ng-class="{ active: isActive('/advertising') }" class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown">Residents <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Advertising</a></li>
-            <li><a href="#">Recipes</a></li>
+            <li ng-class="{ active: isActive('/advertising') }"><a href="#/advertising">Advertising</a></li>
+            <!--li ng-class="{ active: isActive('/recipes') }"><a href="#/recipes">Recipes</a></li-->
           </ul>
         </li>
-        <li class="dropdown">
+        <li ng-class="{ active: isActive('/members') || isActive('/meeting/schedule') || isActive('/meeting/information') }" class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown">POA Board <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#/members">Members</a></li>
-            <li><a href="#">Meeting Schedule</a></li>
-            <li><a href="#">Meeting Information</a></li>
+            <li ng-class="{ active: isActive('/members') }"><a href="#/members">Members</a></li>
+            <li ng-class="{ active: isActive('/meeting/schedule') }"><a href="#/meeting/schedule">Meeting Schedule</a></li>
+            <li ng-class="{ active: isActive('/meeting/information') }"><a href="#/meeting/information">Meeting Information</a></li>
           </ul>
         </li>
-        <li class="dropdown">
+        <li ng-class="{ active: isActive('/documents#architecture') || isActive('/documents#crime') || isActive('/documents#finance') || isActive('/documents#legal') || isActive('/documents#pool') || isActive('/documents#misc') }" class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown">Documents <b class="caret"></b></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Architecture</a></li>
-            <li><a href="#">Crime Prevention</a></li>
-            <li><a href="#">Finance</a></li>
-            <li><a href="#">Legal</a></li>
-            <li><a href="#">Pool</a></li>
-            <li><a href="#">Misc</a></li>
+            <li ng-class="{ active: isActive('/documents#architecture') }"><a href="#/documents#architecture">Architecture</a></li>
+            <li ng-class="{ active: isActive('/documents#crime') }"><a href="#/documents#crime">Crime Prevention</a></li>
+            <li ng-class="{ active: isActive('/documents#finance') }"><a href="#/documents#finance">Finance</a></li>
+            <li ng-class="{ active: isActive('/documents#legal') }"><a href="#/documents#legal">Legal</a></li>
+            <li ng-class="{ active: isActive('/documents#pool') }"><a href="#/documents#pool">Pool</a></li>
+            <li ng-class="{ active: isActive('/documents#misc') }"><a href="#/documents#misc">Misc</a></li>
           </ul>
         </li>
       </ul>

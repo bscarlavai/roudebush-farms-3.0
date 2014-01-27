@@ -1,0 +1,13 @@
+<ul>
+	<div class="row">
+		<div ng-repeat="(category, ads) in advertisements">
+			<div class="col-xs-6 col-md-3">
+				<h3>{{ category }}</h3>
+				<div class="panel panel-default" ng-repeat="ad in ads">
+	      			<div class="panel-body" ng-bind-html="ad.description">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</ul>
