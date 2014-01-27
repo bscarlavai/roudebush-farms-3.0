@@ -25,7 +25,11 @@ roudebushfarms.controller('advertisingCtrl', ['$scope', '$q', '$sce', function($
 		var ads = _.map(data, function(ad){
 			return {
 				category: serviceCategories[ad.get('category')],
-				description: $sce.trustAsHtml(ad.get('description').replace('%%url%%', ad.get('url')).replace('%%phone%%', ad.get('phone'))),
+				description: $sce.trustAsHtml(
+					ad.get('description')
+						.replace('%%url%%', ad.get('url'))
+						.replace('%%phone%%', ad.get('phone'))
+						.replace('%%mail%%', ad.get('email'))),
 				phone: ad.get('phone'),
 				url: ad.get('url')
 			};
@@ -35,6 +39,14 @@ roudebushfarms.controller('advertisingCtrl', ['$scope', '$q', '$sce', function($
 		ads = _.groupBy(ads, 'category');
 
 		$scope.advertisements = ads;
+	});
+
+	$scope.$watch('advertisements', function(){
+		setTimeout(function(){
+			RoudebushFarms.translateEmail();
+			RoudebushFarms.translatePhone();
+			RoudebushFarms.translateUrl();
+		}, 100);
 	});
 
 	var serviceCategories = [
