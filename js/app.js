@@ -18,6 +18,10 @@ roudebushfarms.config(['$routeProvider', function($routeProvider){
 			templateUrl: 'templates/members.html',
 			controller: 'membersCtrl'
 		})
+		.when('/meeting/:subView', {
+			templateUrl: 'templates/meeting.html',
+			controller: 'meetingCtrl'
+		})
 		.when('/advertising', {
 			templateUrl: 'templates/advertising.html',
 			controller: 'advertisingCtrl'
