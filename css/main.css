@@ -42,14 +42,19 @@ body {
   padding-right: 15px;
 }
 
-div .jumbotron {
+.jumbotron {
   color: white;
-  font-size: 20pt;
-  text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 1px;
   background-color: #DDDDDD;
   background-image: url('../imgs/ash-hollow-neighborhood2.jpg');
   background-repeat: no-repeat;
   background-position: 0px -330px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 1px 1px;
 }
 
 #fb-page-link {
