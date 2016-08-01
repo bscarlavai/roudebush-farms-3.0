@@ -68,3 +68,42 @@ a.dropdown-toggle {
 #members {
   list-style: none
 }
+
+/* Upcoming events styling */
+.upcoming-event {
+  height: 68px;
+  border-radius: 4px;
+  margin-bottom: 5px; 
+  padding: 0px
+}
+
+.upcoming-event-date {
+  padding:10px;
+  margin-right:10px;
+}
+
+.upcoming-event-month, .upcoming-event-day {
+  font-size:14px;
+  margin:0px;
+}
+
+.upcoming-event-day {
+  font-size:32px;
+}
+
+.upcoming-event-details {
+  margin-top:15px;
+}
+
+.upcoming-event-type, .upcoming-event-time {
+  display: inline;
+}
+
+.upcoming-event-time-period {
+  font-size: 10px
+}
+
+.upcoming-event-location {
+  margin-right: 5px;
+  display: inline;
+}
