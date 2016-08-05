@@ -71,19 +71,19 @@ a.dropdown-toggle {
 
 /* Upcoming events styling */
 .upcoming-event {
-  height: 68px;
+  height: 72px;
   border-radius: 4px;
   margin-bottom: 5px; 
   padding: 0px
 }
 
 .upcoming-event-date, .upcoming-event-date-w-year {
-  padding:10px;
+  padding:12px 10px;
   margin-right:10px;
 }
 
 .upcoming-event-date-w-year {
-  padding:5px 10px;
+  padding:7px 10px;
 }
 
 .upcoming-event-month, .upcoming-event-day, .upcoming-event-year {
@@ -100,7 +100,7 @@ a.dropdown-toggle {
 }
 
 .upcoming-event-details {
-  margin-top:15px;
+  margin-top:11px;
 }
 
 .upcoming-event-type, .upcoming-event-time {
