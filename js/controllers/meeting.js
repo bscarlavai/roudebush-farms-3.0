@@ -11,7 +11,7 @@ roudebushfarms.controller('meetingCtrl', ['$scope', '$routeParams', 'eventSvc', 
 		}
 	}
 
-	eventSvc.getEvents(0)
+	eventSvc.getEvents()
 		.then(function(data) {
 			$scope.meetings = data;
 		});

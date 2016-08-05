@@ -1,0 +1,22 @@
+<div class="list-group" ng-controller="eventCtrl">
+    <div ng-repeat="meeting in meetings" class="upcoming-event list-group-item">
+        <div class="pull-left label" ng-class="{ 'upcoming-event-date-w-year': !isThisYear(meeting.dateTime), 'upcoming-event-date': isThisYear(meeting.dateTime), 'label-primary': isInFuture(meeting.dateTime), 'label-default': !isInFuture(meeting.dateTime)}">
+            <p class="upcoming-event-month">{{ meeting.dateTime | date: 'MMM' }}</p>
+            <p class="upcoming-event-day">{{ meeting.dateTime | date: 'dd' }}</p>
+            <p ng-show="!isThisYear(meeting.dateTime)" class="upcoming-event-year">{{ meeting.dateTime | date: 'yyyy' }}</p>
+        </div>
+        <div class="upcoming-event-details">
+            <div>
+                <h4 class="upcoming-event-type list-group-item-heading">{{ meeting.name }}</h4>
+                <p class="upcoming-event-time"> {{ meeting.dateTime | date: 'h:mm' }}<span class="upcoming-event-time-period">{{ meeting.dateTime | date: 'a' }}</span></p>
+            </div>
+            <div>
+                <p class="upcoming-event-location list-group-item-text">
+                    <!--a href="https://goo.gl/maps/Wqe0b" target="_blank">{{ meeting.location }}</a-->
+                    <span>{{ meeting.location }}</span>
+                </p>
+                <span ng-show="meeting.filePath != null" ><span class="glyphicon glyphicon-file" style="margin-right: 5px;" aria-hidden="true"></span><a ng-href="documents/minutes/{{ meeting.filePath }}" target="_blank">{{ meeting.filePath.split('/')[1] }}</a></span>
+            </div>
+        </div>
+    </div>
+</div>

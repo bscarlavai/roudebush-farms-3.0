@@ -77,18 +77,26 @@ a.dropdown-toggle {
   padding: 0px
 }
 
-.upcoming-event-date {
+.upcoming-event-date, .upcoming-event-date-w-year {
   padding:10px;
   margin-right:10px;
 }
 
-.upcoming-event-month, .upcoming-event-day {
+.upcoming-event-date-w-year {
+  padding:5px 10px;
+}
+
+.upcoming-event-month, .upcoming-event-day, .upcoming-event-year {
   font-size:14px;
   margin:0px;
 }
 
 .upcoming-event-day {
   font-size:32px;
+}
+
+.upcoming-event-year {
+  font-size:10px;
 }
 
 .upcoming-event-details {

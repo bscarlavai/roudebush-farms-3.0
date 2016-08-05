@@ -1,28 +1,9 @@
-<div class="panel panel-default">
+<div class="panel panel-default" ng-controller="sidebarCtrl">
     <div class="panel-heading">
         <h4>Upcoming events</h4>
     </div>
     <div class="panel-body">
-        <div class="list-group" ng-controller="meetingCtrl">
-            <div ng-repeat="meeting in meetings" class="upcoming-event list-group-item">
-                <div class="upcoming-event-date pull-left label label-primary">
-                    <p class="upcoming-event-month">{{ meeting.dateTime | date: 'MMM' }}</p>
-                    <p class="upcoming-event-day">{{ meeting.dateTime | date: 'dd' }}</p>
-                </div>
-                <div class="upcoming-event-details">
-                    <div>
-                        <h4 class="upcoming-event-type list-group-item-heading">{{ meeting.name }}</h4>
-                        <p class="upcoming-event-time"> {{ meeting.dateTime | date: 'h:mm' }}<span class="upcoming-event-time-period">{{ meeting.dateTime | date: 'a' }}</span></p>
-                    </div>
-                    <div>
-                        <p class="upcoming-event-location list-group-item-text">
-                            <a href="https://goo.gl/maps/Wqe0b" target="_blank">{{ meeting.location }}</a>
-                        </p>
-                        <span ng-show="meeting.fileLocation != null" ><span class="glyphicon glyphicon-file" style="margin-right: 5px;" aria-hidden="true"></span><a ng-href="documents/minutes/{{ meeting.fileLocation }}" target="_blank">Board Meeting Minutes 2016.05.17</a></span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div ng-include="'templates/event.html'"></div>
         <a href="#/meeting/schedule">View all events</a>
     </div>
 </div>
